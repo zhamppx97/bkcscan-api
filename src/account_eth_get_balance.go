@@ -8,7 +8,11 @@ import (
 
 func main() {
 
-	url := "https://bkcscan.com/api?module=account&action=eth_get_balance&address=0x107F4dC628EE75EbcB50953f8a72EbddD280869C"
+	MODULE := "account"
+	ACTION := "eth_get_balance"
+	ADDRESS := "0x107F4dC628EE75EbcB50953f8a72EbddD280869C"
+
+	url := "https://bkcscan.com/api?module=" + MODULE + "&action=" + ACTION + "&address=" + ADDRESS
 	method := "GET"
 
 	client := &http.Client{}
